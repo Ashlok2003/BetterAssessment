@@ -1,0 +1,19 @@
+# Ignore node_modules
+node_modules
+
+# Ignore build output
+dist
+build
+
+# Ignore config files you don’t want formatted
+*.config.js
+*.config.ts
+
+# Ignore logs
+*.log
+
+# Ignore coverage reports
+coverage
+
+# Ignore generated files
+*.d.ts
