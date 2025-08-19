@@ -3,6 +3,10 @@
     /* File Layout */
     "rootDir": "./src",
     "outDir": "./dist",
+    "rootDirs": [
+      "./src",
+      "./tests"
+    ],
     /* Environment Settings */
     "target": "esnext",
     "module": "commonjs",
@@ -11,7 +15,9 @@
       "ES2022"
     ],
     "types": [
-      "node"
+      "node",
+      "jest",
+      "mocha",
     ],
     /* Output */
     "sourceMap": true,
@@ -36,7 +42,8 @@
     }
   },
   "include": [
-    "src"
+    "src",
+    "tests",
   ],
   "exclude": [
     "node_modules",

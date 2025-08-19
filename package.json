@@ -7,7 +7,10 @@
     "dev": "nodemon --watch src --ext ts,json --exec ts-node src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint 'src/**/*.{ts,js}' --max-warnings=0",
+    "lint:fix": "eslint 'src/**/*.{ts,js}' --fix",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "format": "prettier --write 'src/**/*.{ts,js,json,md}'",
     "format:check": "prettier --check 'src/**/*.{ts,js,json,md}'"
   },
@@ -26,15 +29,22 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^24.3.0",
+    "@types/supertest": "^6.0.3",
     "@types/swagger-ui-express": "^4.1.8",
     "@types/yamljs": "^0.2.34",
     "@typescript-eslint/eslint-plugin": "^8.40.0",
     "@typescript-eslint/parser": "^8.40.0",
     "eslint": "^9.33.0",
+    "jest": "^30.0.5",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"
   }
 }

@@ -1,7 +1,13 @@
 import { z } from 'zod';
 
 export const userIdSchema = z.object({
-  id: z.coerce.number().int().positive(),
+  id: z.coerce
+    .number()
+    .int()
+    .positive()
+    .refine((val) => !isNaN(val), {
+      message: 'Invalid input: expected number, received NaN',
+    }),
 });
 
 export const userInputSchema = z.object({

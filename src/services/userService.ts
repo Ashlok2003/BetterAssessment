@@ -3,6 +3,11 @@ import { type User } from '../models/user';
 let users: User[] = [];
 let idCounter = 1;
 
+export const reset = () => {
+  users = [];
+  idCounter = 1;
+};
+
 export const getUsers = (): User[] => users;
 
 export const getUserById = (id: number): User | undefined => users.find((u) => u.id === id);
